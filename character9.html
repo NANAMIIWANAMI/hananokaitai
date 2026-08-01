@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>三森すみれ | CHARACTER</title>
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="character9.css">
+<link rel="stylesheet" href="menu.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<a href="character.html" class="back-top">
+← CHARACTER
+</a>
+
+<div class="container">
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-image">
+
+<img
+src="images/sumire_color.png"
+class="color-bg"
+alt="">
+
+<img
+src="images/sumire_full_front.png"
+class="full-image"
+alt="三森すみれ">
+
+</div>
+
+<div class="hero-text">
+
+<div class="name-box">
+
+<span class="ruby-name">　 み　も　り</span>
+
+<h1>三森 すみれ</h1>
+
+</div>
+
+<div class="hero-sub">
+
+<h2>SUMIRE MIMORI</h2>
+
+<span class="cv">
+<span>CV.</span> ???
+</span>
+
+</div>
+
+<div class="line"></div>
+
+<p class="catch">
+
+「──貴女の歩む道に<br>
+　　　　　　きっと答えがあるはずよ」
+
+</p>
+
+<!-- サンプルボイス -->
+
+<div class="voice-mini">
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROFILE -->
+
+<section class="profile-area">
+
+<div class="profile">
+
+<h2>PROFILE</h2>
+
+<table>
+
+<tr>
+<th>年齢</th>
+<td>16歳</td>
+</tr>
+
+<tr>
+<th>誕生日</th>
+<td>5月9日</td>
+</tr>
+
+<tr>
+<th>立場</th>
+<td>？</td>
+</tr>
+
+<tr>
+<th>身長</th>
+<td>159cm</td>
+</tr>
+
+<tr>
+<th>出身</th>
+<td>？</td>
+</tr>
+
+<tr>
+<th>趣味・特技</th>
+<td>？</td>
+</tr>
+
+<tr>
+<th>家族構成</th>
+<td>？</td>
+</tr>
+
+<tr>
+
+<th>イメージカラー</th>
+
+<td>
+
+<span class="color-chip"></span>
+
+壺菫（つぼすみれ）
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="back-image">
+
+<img
+src="images/sumire_sd.png"
+class="sd-mini"
+alt="SD">
+
+</div>
+
+</section>
+
+<!-- キャラクター説明 -->
+
+<section class="description">
+
+<p>
+
+謎多き神出鬼没のはだしの少女。
+
+<br><br>
+
+めぐみがひとりでいる時や、
+悩んでいる時に現れて助言をしてくれる。
+
+<br><br>
+
+髪飾りのせいか鈴の音がよく鳴っている。
+
+<br><br>
+
+なんとなく、
+めぐみに似た雰囲気を纏っている。
+
+</p>
+
+<div class="quote">
+
+────「……もう行かなくちゃ。<br>
+　　　帰り道、迷わないでね」<br>
+　　鈴の音が鳴る。もうその姿は見えなくなっていた。
+
+</div>
+
+<div class="character-nav">
+
+    <a href="character.html" class="nav-back">
+        ← CHARACTER一覧へ戻る
+    </a>
+
+    <a href="character10.html" class="nav-next">
+        麗紅 →
+    </a>
+
+</div>
+
+<div id="menu-container"></div>
+
+<script src="menu-loader.js"></script>
+<script>
+
+document.querySelectorAll(".character-nav a").forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const url=this.href;
+
+        if(this.classList.contains("nav-next")){
+            document.body.classList.add("slide-left");
+        }else{
+            document.body.classList.add("slide-right");
+        }
+
+        setTimeout(()=>{
+            location.href=url;
+        },450);
+
+    });
+
+});
+
+window.addEventListener("pageshow",()=>{
+
+    document.body.classList.remove("slide-left");
+    document.body.classList.remove("slide-right");
+
+});
+
+</script>
+
+</body>
+
+</html>

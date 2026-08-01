@@ -1,0 +1,449 @@
+/*==================================================
+    HANA NO KAITAI MENU
+==================================================*/
+
+.hamburger{
+
+    position:fixed;
+    top:0px;
+    right:0px;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    color:#fff;
+
+    padding:10px 16px;
+
+    background:rgba(120,20,40,.38);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,215,221,.25);
+
+    border-radius:0;
+
+    box-shadow:0 4px 18px rgba(0,0,0,.30);
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    user-select:none;
+
+    transition:.35s;
+
+}
+
+.hamburger:hover{
+
+    color:#ffd7dd;
+
+}
+
+.hamburger .icon{
+
+    font-size:30px;
+    line-height:1;
+
+}
+
+.hamburger .text{
+
+    font-family:"Yu Mincho",serif;
+
+    font-size:13px;
+
+    letter-spacing:.30em;
+
+}
+
+
+
+/*==================================================
+    Overlay
+==================================================*/
+
+.menu-overlay{
+
+    position:fixed;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(120,15,30,.22),
+            transparent 45%
+        ),
+        rgba(18,8,12,.60);
+
+    -webkit-backdrop-filter:blur(18px);
+    backdrop-filter:blur(18px);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.45s;
+
+    z-index:9998;
+
+}
+
+.menu-overlay.show{
+
+    opacity:1;
+    visibility:visible;
+
+}
+.menu-overlay.show .menu-window{
+
+    transform:translateY(0);
+
+    opacity:1;
+
+}
+
+
+
+/*==================================================
+    Window
+==================================================*/
+
+.menu-window{
+
+    width:430px;
+    max-height:90vh;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:flex-start;
+
+    text-align:center;
+
+    overflow-y:auto;
+
+    scrollbar-width:none;
+
+    padding:15px 0 25px;
+
+    transform:translateY(-40px);
+opacity:0;
+
+transition:
+    transform .55s ease,
+    opacity .55s ease;
+
+}
+
+.menu-window::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+
+/*==================================================
+    Logo
+==================================================*/
+
+.menu-mainlogo{
+
+    width:250px;
+
+    margin-bottom:2px;
+
+    flex-shrink:0;
+
+}
+
+.menu-sublogo{
+
+    color:#c98890;
+
+    font-size:13px;
+
+    letter-spacing:.45em;
+
+    margin-bottom:8px;
+
+}
+
+
+
+/*==================================================
+    Divider
+==================================================*/
+
+.menu-divider{
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:18px;
+
+    margin-bottom:10px;
+
+    color:#be4155;
+
+    font-size:18px;
+
+}
+
+.menu-divider::before,
+.menu-divider::after{
+
+    content:"";
+
+    width:125px;
+    height:1px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #8c2234,
+        #ca566a,
+        #8c2234,
+        transparent
+    );
+
+}
+
+
+
+
+/*==================================================
+    Menu
+==================================================*/
+
+.overlay-menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:0;
+
+    width:100%;
+
+}
+
+
+
+.overlay-menu a{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    padding:6px 0 8px;
+
+    transition:.35s;
+
+}
+
+
+
+.overlay-menu strong{
+
+    position:relative;
+
+    display:inline-block;
+
+    font-size:24px;
+
+    font-weight:normal;
+
+    letter-spacing:.20em;
+
+    text-align:center;
+
+}
+
+
+
+.overlay-menu small{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#bc7b83;
+
+    font-size:13px;
+
+    letter-spacing:.12em;
+
+}
+
+
+
+.overlay-menu a::after{
+
+    content:"";
+
+    display:block;
+
+    width:240px;
+
+    height:1px;
+
+    margin:8px auto 0;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(180,55,75,.55),
+
+    transparent);
+
+}
+
+
+
+/* 花 */
+
+
+.overlay-menu strong::before,
+.overlay-menu strong::after{
+
+    content:"❁";
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#c54259;
+
+    font-size:13px;
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.overlay-menu strong::before{
+
+    left:-30px;
+
+}
+
+.overlay-menu strong::after{
+
+    right:-30px;
+
+}
+
+.overlay-menu a:hover strong::before,
+.overlay-menu a:hover strong::after{
+
+    opacity:1;
+
+}
+
+
+
+.overlay-menu a:hover{
+
+    transform:none;
+
+}
+
+
+.overlay-menu a:hover strong{
+
+    color:#ffe3e7;
+
+}
+
+
+
+.overlay-menu a:hover small{
+
+    color:#ffd2d8;
+
+}
+
+
+
+
+
+
+/*==================================================
+    Responsive
+==================================================*/
+
+@media(max-width:700px){
+
+.menu-window{
+
+    width:92%;
+
+}
+
+.menu-mainlogo{
+
+    width:220px;
+
+}
+
+.menu-divider::before,
+.menu-divider::after{
+
+    width:70px;
+
+}
+
+.overlay-menu strong{
+
+    font-size:22px;
+
+}
+
+.overlay-menu small{
+
+    font-size:11px;
+
+}
+
+}
+.menu-content{
+
+    transform:translateY(20px);
+
+}
+.hamburger{
+
+    background:rgba(120,20,40,.88);
+
+    -webkit-backdrop-filter:blur(12px);
+    backdrop-filter:blur(12px);
+
+}
+.hamburger .text{
+
+    display:none;
+
+}

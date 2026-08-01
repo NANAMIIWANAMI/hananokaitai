@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>宮上 めぐみ | CHARACTER</title>
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="character1.css">
+<link rel="stylesheet" href="menu.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+<a href="character.html" class="back-top">
+← CHARACTER
+</a>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-image">
+
+    <img src="images/megumi_color.png"
+         class="color-bg"
+         alt="">
+
+    <img src="images/megumi_full_front.png"
+         class="full-image"
+         alt="宮上めぐみ">
+
+    <img src="images/megumi_full_back.png"
+         class="hero-back"
+         alt="背面">
+
+</div>
+
+<div class="hero-text">
+
+<div class="name-box">
+
+　　　<span class="ruby-name">
+　　　    <span class="ruby-pc">み　や　が　み</span>
+　　　    <span class="ruby-sp">　　　　　　　　　</span>
+　　　</span>
+
+    <h1>
+        宮上 めぐみ
+    </h1>
+
+</div>
+
+<div class="hero-sub">
+
+    <h2>MEGUMI MIYAKAMI</h2>
+
+    <span class="cv">
+        <span>CV.</span> 夏色花梨
+    </span>
+
+</div>
+
+<div class="line"></div>
+
+<p class="catch">
+
+「──この世界で何か<br>
+　　　見つけられるかもしれない」
+
+</p>
+
+<!-- サンプルボイス -->
+
+<div class="voice-mini">
+
+<button class="voice-btn" data-audio="sounds/megumi/voice01.wav">
+▶ Voice 01
+</button>
+
+<button class="voice-btn" data-audio="sounds/megumi/voice02.wav">
+▶ Voice 02
+</button>
+
+<button class="voice-btn" data-audio="sounds/megumi/voice03.wav">
+▶ Voice 03
+</button>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROFILE -->
+
+<section class="profile-area">
+
+<div class="profile">
+
+<h2>PROFILE</h2>
+
+<table>
+
+<tr>
+<th>年齢</th>
+<td>17歳</td>
+</tr>
+
+<tr>
+<th>職業</th>
+<td>高校2年生</td>
+</tr>
+
+<tr>
+<th>身長</th>
+<td>158cm</td>
+</tr>
+
+<tr>
+<th>趣味・特技</th>
+<td>ガーデニング</td>
+</tr>
+
+<tr>
+<th>家族構成</th>
+<td>父・母</td>
+</tr>
+
+<tr>
+<th>イメージカラー</th>
+
+<td>
+
+<span class="color-chip"></span>
+
+珊瑚色（さんごいろ）
+
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="back-image">
+
+    <img
+        src="images/megumi_sd.png"
+        class="sd-mini"
+        alt="SD">
+
+</div>
+
+</section>
+
+<!-- キャラクター説明 -->
+
+<section class="description">
+
+<p>
+
+横浜の周りに他者には見えない壁が見えており、
+横浜から出たことがない。
+
+<br><br>
+
+幼い頃に横浜から出ようと試みて
+港から船に乗ったことがあるが、<br>
+船が壁へ衝突してしまい、
+横浜から出ることはできなかった。
+<br>
+衝突事故は船舶座礁として処理されたが、<br>
+めぐみの瞳にはただひとり、壁との衝突の瞬間を映っていた。
+
+<br><br>
+
+それ以来、
+外への憧れは消えてしまい、<br>
+
+「私は横浜が好きだから」
+
+と自分へ言い聞かせている。
+
+<br><br>
+
+壁から出られないことを母から
+
+<br>「氏神様に愛されているからよ」
+
+と教えられて育ったが、<br>
+
+実際は自らが氏神の血をひいているからだと
+未来の横浜で知ることになる。
+
+</p>
+
+<div class="quote">
+
+────大人になったら都会に出たいと楽しげに話す<br>
+　　　　　　　遠くの席の子達の声が頭にこだまする。
+
+</div>
+
+</section>
+
+<!-- 表情 -->
+
+<section class="expression">
+
+<div class="expression-grid">
+
+<img src="images/megumi_bust_01.png" alt="">
+
+<img src="images/megumi_bust_02.png" alt="">
+
+<img src="images/megumi_bust_03.png" alt="">
+
+</div>
+
+</section>
+
+<div class="character-nav">
+
+    <a href="character.html" class="nav-back">
+        ← CHARACTER一覧へ戻る
+    </a>
+
+    <a href="character2.html" class="nav-next">
+        篠原 旭 →
+    </a>
+
+</div>
+
+<div id="menu-container"></div>
+
+<script src="menu-loader.js"></script>
+
+
+<script>
+
+// ページ送り
+
+document.querySelectorAll(".character-nav a").forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const url=this.href;
+
+        if(this.classList.contains("nav-next")){
+            document.body.classList.add("slide-left");
+        }else{
+            document.body.classList.add("slide-right");
+        }
+
+        setTimeout(()=>{
+            location.href=url;
+        },450);
+
+    });
+
+});
+
+
+// ページ復帰
+
+window.addEventListener("pageshow",()=>{
+
+    document.body.classList.remove("slide-left");
+    document.body.classList.remove("slide-right");
+
+});
+
+
+
+
+// サンプルボイス
+
+let currentVoice = null;
+let currentButton = null;
+
+
+document.querySelectorAll(".voice-btn").forEach(btn=>{
+
+
+    btn.addEventListener("click",()=>{
+
+
+        const src = btn.dataset.audio;
+
+
+        if(currentVoice){
+
+            currentVoice.pause();
+            currentVoice.currentTime = 0;
+
+            if(currentButton){
+
+                currentButton.textContent =
+                currentButton.dataset.label;
+
+            }
+
+        }
+
+
+        if(currentButton === btn){
+
+            currentVoice = null;
+            currentButton = null;
+
+            return;
+
+        }
+
+
+        btn.dataset.label = btn.textContent;
+
+
+        btn.textContent =
+        btn.textContent.replace("▶","■");
+
+
+        currentVoice = new Audio(src);
+
+        currentButton = btn;
+
+
+        currentVoice.play();
+
+
+        currentVoice.addEventListener("ended",()=>{
+
+            btn.textContent =
+            btn.dataset.label;
+
+            currentVoice = null;
+            currentButton = null;
+
+        });
+
+
+    });
+
+
+});
+
+
+window.addEventListener("pageshow",()=>{
+
+    document.body.classList.remove("slide-left");
+    document.body.classList.remove("slide-right");
+
+});
+
+</script>
+
+</body>
+</html>

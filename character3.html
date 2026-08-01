@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>江良 冬真 | CHARACTER</title>
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="character3.css">
+<link rel="stylesheet" href="menu.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<a href="character.html" class="back-top">
+← CHARACTER
+</a>
+
+<div class="container">
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-image">
+
+<img src="images/toma_color.png"
+class="color-bg"
+alt="">
+
+<img src="images/toma_full_front.png"
+class="full-image"
+alt="江良冬真">
+
+<img
+src="images/toma_full_back.png"
+class="back-full"
+alt="背面">
+
+
+</div>
+
+<div class="hero-text">
+
+<div class="name-box">
+
+    <span class="ruby-name">　え　　　　ら　　　　　と　　う　　ま</span>
+
+    <h1>江良 冬真</h1>
+
+</div>
+
+<div class="hero-sub">
+
+<h2>TOUMA ERA</h2>
+
+<span class="cv">
+<span>CV.</span> ???
+</span>
+
+</div>
+
+<div class="line"></div>
+
+<p class="catch">
+
+「──アンタは考えすぎなんだよ、<br>
+　　　たまには肩の力抜いて……さ」
+
+</p>
+
+<!-- サンプルボイス -->
+
+<div class="voice-mini">
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROFILE -->
+
+<section class="profile-area">
+
+<div class="profile">
+
+<h2>PROFILE</h2>
+
+<table>
+
+<tr>
+<th>年齢</th>
+<td>15歳</td>
+</tr>
+
+<tr>
+<th>誕生日</th>
+<td>12月4日</td>
+</tr>
+
+<tr>
+<th>職業</th>
+<td>高校1年生</td>
+</tr>
+
+<tr>
+<th>身長</th>
+<td>171cm</td>
+</tr>
+
+<tr>
+<th>出身</th>
+<td>神奈川県横浜市</td>
+</tr>
+
+<tr>
+<th>趣味・特技</th>
+<td>天体観測・努力</td>
+</tr>
+
+<tr>
+<th>家族構成</th>
+<td>父・母・兄</td>
+</tr>
+
+<tr>
+
+<th>イメージカラー</th>
+
+<td>
+
+<div class="color-chip"></div>
+
+若竹色（わかたけいろ）
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="back-image">
+
+<img
+src="images/toma_sd.png"
+class="sd-mini"
+alt="SD">
+
+</div>
+
+</section>
+
+<!-- キャラクター説明 -->
+
+<section class="description">
+
+<p>
+
+めぐみ達の後輩の一年生で、俊彦の弟。
+
+<br><br>
+
+とても器用で、
+どんなことでもすぐにこなしてしまう。
+
+<br><br>
+
+見た目とは正反対に活発な性格。
+
+<br><br>
+
+特定の部活には所属していないが、<br>
+放課後は毎日のように
+どこかの部活へ顔を出しているため、
+
+<br>
+
+ひそかに
+「兼部王」
+と呼ばれている。
+
+<br><br>
+
+最近は旭の所属する囲碁将棋部へ
+立ち寄ることが多く、
+
+<br>
+
+「打倒 篠原！」
+
+と口では言っているものの、
+旭のことは尊敬している。
+
+</p>
+
+<div class="quote">
+
+────「篠原！ 今日も一局、勝負だっ！」<br>
+　　　　　　　今日も懲りずに勝負を挑みに行く。
+
+</div>
+
+</section>
+
+<div class="character-nav">
+
+    <a href="character.html" class="nav-back">
+        ← CHARACTER一覧へ戻る
+    </a>
+
+    <a href="character4.html" class="nav-next">
+        江良 俊彦 →
+    </a>
+
+</div>
+
+<div id="menu-container"></div>
+
+<script src="menu-loader.js"></script>
+<script>
+
+document.querySelectorAll(".character-nav a").forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const url=this.href;
+
+        if(this.classList.contains("nav-next")){
+            document.body.classList.add("slide-left");
+        }else{
+            document.body.classList.add("slide-right");
+        }
+
+        setTimeout(()=>{
+            location.href=url;
+        },450);
+
+    });
+
+});
+
+window.addEventListener("pageshow",()=>{
+
+    document.body.classList.remove("slide-left");
+    document.body.classList.remove("slide-right");
+
+});
+
+</script>
+
+</body>
+
+</html>

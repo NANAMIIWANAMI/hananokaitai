@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>狐炎 | CHARACTER</title>
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="character8.css">
+<link rel="stylesheet" href="menu.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<a href="character.html" class="back-top">
+← CHARACTER
+</a>
+
+<div class="container">
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-image">
+
+<img
+src="images/huyan_color.png"
+class="color-bg"
+alt="">
+
+<img
+src="images/huyan_full_front.png"
+class="full-image"
+alt="狐炎">
+
+<img
+src="images/huyan_full_back.png"
+class="back-full"
+alt="背面">
+
+</div>
+
+<div class="hero-text">
+
+<div class="name-box">
+
+<span class="ruby-name"> 　フーイェン</span>
+
+<h1>狐炎</h1>
+
+</div>
+
+<div class="hero-sub">
+
+<h2>HUYAN</h2>
+
+<span class="cv">
+<span>CV.</span> ???
+</span>
+
+</div>
+
+<div class="line"></div>
+
+<p class="catch">
+
+「……ずっと、この日を<br>
+　　　　　　……夢に視ていた」
+
+</p>
+
+<!-- サンプルボイス -->
+
+<div class="voice-mini">
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROFILE -->
+
+<section class="profile-area">
+
+<div class="profile">
+
+<h2>PROFILE</h2>
+
+<table>
+
+<tr>
+<th>年齢</th>
+<td>見た目の年齢は9歳（推定750歳）</td>
+</tr>
+
+<tr>
+<th>誕生日</th>
+<td>？</td>
+</tr>
+
+<tr>
+<th>立場</th>
+<td>中華街の土地神</td>
+</tr>
+
+<tr>
+<th>身長</th>
+<td>112cm</td>
+</tr>
+
+<tr>
+<th>出身</th>
+<td>横浜中華街</td>
+</tr>
+
+<tr>
+<th>特技</th>
+<td>千里眼・式神を操る</td>
+</tr>
+
+<tr>
+<th>家族構成</th>
+<td>両親・兄・双子の妹がいたが既に老衰</td>
+</tr>
+
+<tr>
+
+<th>イメージカラー</th>
+
+<td>
+
+<span class="color-chip"></span>
+
+嫩黄色（どんこうしょく）
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="back-image">
+
+<img
+src="images/huyan_sd.png"
+class="sd-mini"
+alt="SD">
+
+</div>
+
+</section>
+
+<!-- キャラクター説明 -->
+
+<section class="description">
+
+<p>
+中華街の土地神。
+
+<br><br>
+
+未来の中華街で出会うが、<br>
+めぐみ達がいた600年前の現代の横浜にも存在していた。
+
+<br><br>
+
+目はほとんどみえていないため、式神の目を借りて横浜を見守っている。
+
+<br><br>
+
+もとは人間であったが、<br>
+土地神の力が宿っていると知れた際に<br>
+変若水を飲まされて不老不死になった。
+
+<br><br>
+
+やがて永らく生きているうちに神力を手に入れた。
+
+</p>
+
+<div class="quote">
+
+────「……<ruby>明日<rt>あす</rt></ruby>も、ここで待っている」<br>
+　　孤独を忘れるほど永く生きた果てに繋ぐ未来とは。
+
+</div>
+<div class="character-nav">
+
+    <a href="character.html" class="nav-back">
+        ← CHARACTER一覧へ戻る
+    </a>
+
+    <a href="character9.html" class="nav-next">
+        三森 すみれ →
+    </a>
+
+</div>
+
+<div id="menu-container"></div>
+
+<script src="menu-loader.js"></script>
+<script>
+
+document.querySelectorAll(".character-nav a").forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const url=this.href;
+
+        if(this.classList.contains("nav-next")){
+            document.body.classList.add("slide-left");
+        }else{
+            document.body.classList.add("slide-right");
+        }
+
+        setTimeout(()=>{
+            location.href=url;
+        },450);
+
+    });
+
+});
+
+window.addEventListener("pageshow",()=>{
+
+    document.body.classList.remove("slide-left");
+    document.body.classList.remove("slide-right");
+
+});
+
+</script>
+
+</body>
+</html>

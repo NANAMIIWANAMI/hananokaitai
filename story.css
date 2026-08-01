@@ -1,0 +1,294 @@
+body{
+
+    margin:0;
+    background:#000;
+    color:white;
+    font-family:"Yu Mincho",serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* 背景 */
+
+.background{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100svh;
+
+    background:url("images/background.jpg") center center / cover no-repeat;
+
+    filter:brightness(.33);
+
+    z-index:-1;
+
+}
+
+/* 全体 */
+
+.container{
+
+    width:92%;
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:70px 0 100px;
+
+    text-align:center;
+
+}
+
+/* タイトル */
+
+h1{
+
+    margin:0;
+
+    font-size:60px;
+    font-weight:normal;
+    letter-spacing:.35em;
+
+}
+
+.subtitle{
+
+    margin:-15px 0 25px;
+
+    font-size:18px;
+    letter-spacing:.2em;
+
+    color:rgba(255,255,255,.65);
+
+}
+
+/* 飾り */
+
+.title-decoration{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:60px;
+
+}
+
+.title-decoration::before,
+.title-decoration::after{
+
+    content:"";
+
+    width:400px;
+    height:1px;
+
+    background:rgba(255,255,255,.25);
+
+}
+
+.title-decoration span{
+
+    color:white;
+    font-size:22px;
+
+}
+
+/* 本文 */
+
+.story-box{
+
+    width:80%;
+
+    margin:0 auto;
+
+    padding:35px 55px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:18px;
+
+    line-height:2.3;
+
+    font-size:17px;
+
+    color:rgba(255,255,255,.82);
+
+    text-align:left;
+
+    box-shadow:0 0 25px rgba(255,255,255,.08);
+
+}
+
+/* TOPボタン */
+
+.back{
+
+    display:inline-block;
+
+    margin-top:60px;
+
+    color:white;
+
+    text-decoration:none;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    padding:12px 35px;
+
+    border-radius:30px;
+
+    transition:.35s;
+
+}
+
+.back:hover{
+
+    color:#ffd8ea;
+
+    border-color:#ffd8ea;
+
+    box-shadow:0 0 20px rgba(255,180,220,.3);
+
+}
+
+/* ==========================
+   スマホ
+========================== */
+
+@media(max-width:700px){
+
+    .container{
+
+        width:92%;
+        padding:45px 0 70px;
+
+    }
+
+    h1{
+
+        font-size:34px;
+        letter-spacing:.18em;
+
+    }
+
+    .subtitle{
+
+        margin:-8px 0 20px;
+
+        font-size:13px;
+
+        letter-spacing:.12em;
+
+    }
+
+    .title-decoration{
+
+        margin-bottom:35px;
+
+    }
+
+    .title-decoration::before,
+    .title-decoration::after{
+
+        width:120px;
+
+    }
+
+    .story-box{
+
+        width:100%;
+
+        padding:24px;
+
+        box-sizing:border-box;
+
+        font-size:15px;
+
+        line-height:2.1;
+
+    }
+
+}
+/* ===========================
+   サウンドトラック
+=========================== */
+
+.soundtrack-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:16px;
+
+    margin:25px auto;
+
+}
+
+.soundtrack-image img{
+
+    width:100%;
+
+    display:block;
+
+    filter:blur(7px) brightness(.45);
+
+    transform:scale(1.05);
+
+}
+
+.coming-overlay{
+
+    position:absolute;
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:rgba(0,0,0,.15);
+
+}
+
+.coming-text{
+
+    color:white;
+
+    font-family:"Yu Mincho",serif;
+
+    letter-spacing:.18em;
+
+    line-height:1.9;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,.45),
+        0 0 25px rgba(255,255,255,.18);
+
+}
+
+.coming-text span{
+
+    font-size:34px;
+
+    letter-spacing:.35em;
+
+}

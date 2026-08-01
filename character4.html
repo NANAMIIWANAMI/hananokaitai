@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>江良 俊彦 | CHARACTER</title>
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="character4.css">
+<link rel="stylesheet" href="menu.css">
+<link rel="stylesheet" href="menu.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<a href="character.html" class="back-top">
+← CHARACTER
+</a>
+
+<div class="container">
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-image">
+
+<img src="images/toshihiko_color.png"
+class="color-bg"
+alt="">
+
+<img src="images/toshihiko_full_front.png"
+class="full-image"
+alt="江良俊彦">
+
+<img
+src="images/toshihiko_full_back.png"
+class="hero-back"
+alt="背面">
+
+</div>
+
+<div class="hero-text">
+
+<div class="name-box">
+
+    <span class="ruby-name">　え　　　　ら　　　　　と　し　ひ　こ</span>
+
+    <h1>江良 俊彦</h1>
+
+</div>
+
+<div class="hero-sub">
+
+<h2>TOSHIHIKO ERA</h2>
+
+<span class="cv">
+<span>CV.</span> ???
+</span>
+
+</div>
+
+<div class="line"></div>
+
+<p class="catch">
+
+「──疲れた時には甘いものですよ。<br>
+　　　貴女の心が少しでも安らぎますように」
+
+</p>
+
+<!-- サンプルボイス -->
+
+<div class="voice-mini">
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROFILE -->
+
+<section class="profile-area">
+
+<div class="profile">
+
+<h2>PROFILE</h2>
+
+<table>
+
+<tr>
+<th>年齢</th>
+<td>26歳</td>
+</tr>
+
+<tr>
+<th>誕生日</th>
+<td>11月29日</td>
+</tr>
+
+<tr>
+<th>職業</th>
+<td>実家の和菓子屋の手伝い</td>
+</tr>
+
+<tr>
+<th>身長</th>
+<td>185cm</td>
+</tr>
+
+<tr>
+<th>出身</th>
+<td>神奈川県横浜市</td>
+</tr>
+
+<tr>
+<th>趣味・特技</th>
+<td>和菓子作り</td>
+</tr>
+
+<tr>
+<th>家族構成</th>
+<td>父・母・弟</td>
+</tr>
+
+<tr>
+
+<th>イメージカラー</th>
+
+<td>
+
+<span class="color-chip"></span>
+
+紺滅（こんけし）
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="back-image">
+
+<img
+src="images/toshihiko_sd.png"
+class="sd-mini"
+alt="SD">
+
+</div>
+
+</section>
+
+<!-- キャラクター説明 -->
+
+<section class="description">
+
+<p>
+
+冬真の兄。
+
+<br><br>
+
+めぐみと新菜が足しげく通う甘味処
+「六華庵」を切り盛りしている、
+物腰柔らかな青年。<br>
+弟のことが可愛くて可愛くて仕方がない。
+
+<br><br>
+
+未来の横浜へたどり着いても慌てることなく、
+普段と変わらない穏やかな調子のままであった。
+
+<br><br>
+
+めぐみ達を見て時々、若さをうらやむ発言をするが<br>
+自分自身のことはあまり話そうとはしない。
+
+</p>
+
+<div class="quote">
+
+────「そう言わずに、お茶だけでも」<br>
+　　　　　穏やかな笑顔に、自然と心がほどけていく。
+
+</div>
+
+<div class="character-nav">
+
+    <a href="character.html" class="nav-back">
+        ← CHARACTER一覧へ戻る
+    </a>
+
+    <a href="character5.html" class="nav-next">
+        黑芳 →
+    </a>
+
+</div>
+
+<div id="menu-container"></div>
+
+<script src="menu-loader.js"></script>
+<script>
+
+document.querySelectorAll(".character-nav a").forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const url=this.href;
+
+        if(this.classList.contains("nav-next")){
+            document.body.classList.add("slide-left");
+        }else{
+            document.body.classList.add("slide-right");
+        }
+
+        setTimeout(()=>{
+            location.href=url;
+        },450);
+
+    });
+
+});
+
+window.addEventListener("pageshow",()=>{
+
+    document.body.classList.remove("slide-left");
+    document.body.classList.remove("slide-right");
+
+});
+
+</script>
+
+</body>
+</html>

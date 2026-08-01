@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>麗紅 | CHARACTER</title>
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="character10.css">
+<link rel="stylesheet" href="menu.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<a href="character.html" class="back-top">
+← CHARACTER
+</a>
+
+<div class="container">
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-image">
+
+<img
+src="images/lihong_color.png"
+class="color-bg"
+alt="">
+
+<img
+src="images/lihong_full_front.png"
+class="full-image"
+alt="麗紅">
+
+</div>
+
+<div class="hero-text">
+
+<div class="name-box">
+
+<span class="ruby-name">
+　リ　ー　ホ　ン
+</span>
+
+<h1>麗紅</h1>
+
+</div>
+
+<div class="hero-sub">
+
+<h2>LIHONG</h2>
+
+<span class="cv">
+<span>CV.</span> ???
+</span>
+
+</div>
+
+<div class="line"></div>
+
+<p class="catch">
+
+「──<ruby>黑芳<rt>アイツ</rt></ruby>、口が悪くてすまないね<br>
+後で私からガツンと言っといてやるからさ」
+
+</p>
+
+<!-- サンプルボイス -->
+
+<div class="voice-mini">
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROFILE -->
+
+<section class="profile-area">
+
+<div class="profile">
+
+<h2>PROFILE</h2>
+
+<table>
+
+<tr>
+<th>年齢</th>
+<td>27歳</td>
+</tr>
+
+<tr>
+<th>誕生日</th>
+<td>9月23日</td>
+</tr>
+
+<tr>
+<th>職業</th>
+<td>九天閣 レストランオーナー</td>
+</tr>
+
+<tr>
+<th>身長</th>
+<td>174cm</td>
+</tr>
+
+<tr>
+<th>出身</th>
+<td>横浜中華街</td>
+</tr>
+
+<tr>
+<th>趣味・特技</th>
+<td>コミュニケーション</td>
+</tr>
+
+<tr>
+<th>家族構成</th>
+<td>父</td>
+</tr>
+
+<tr>
+
+<th style="white-space: nowrap;">
+イメージカラー
+</th>
+
+<td style="white-space:nowrap;">
+
+<span class="color-chip"></span>
+
+紅の八塩（くれないのやしお）
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+<div class="back-image">
+
+<img
+src="images/lihong_sd.png"
+class="sd-mini"
+alt="SD">
+
+</div>
+
+</section>
+
+<!-- キャラクター説明 -->
+
+<section class="description">
+
+<p>
+
+明朗快活で面倒見の良い姉御肌。
+
+<br><br>
+
+中華街のシンボルである
+九天閣の2階で、<br>
+レストラン「天竺亭（てんじくてい）」を経営している。
+
+<br><br>
+
+料理はシェフたちに任せており、
+本人は接客と食べることが専門。<br>
+人と話すことが好きで、
+麗紅に会うことを楽しみに訪れる常連客も多い。
+
+<br><br>
+
+黑芳とは10年以上の付き合いがあり、
+実の弟のように思っている。
+
+</p>
+
+<div class="quote">
+
+────「ほら、いい顔になった。それが一番！」<br>
+　　　　　今日も天竺亭には、たくさんの笑顔が咲く。
+
+</div>
+
+<div class="character-nav">
+
+    <a href="character.html" class="nav-back">
+        ← CHARACTER一覧へ戻る
+    </a>
+
+    <a href="character1.html" class="nav-next">
+        宮上 めぐみ →
+    </a>
+
+</div>
+
+<div id="menu-container"></div>
+
+<script src="menu-loader.js"></script>
+<script>
+
+document.querySelectorAll(".character-nav a").forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const url=this.href;
+
+        if(this.classList.contains("nav-next")){
+            document.body.classList.add("slide-left");
+        }else{
+            document.body.classList.add("slide-right");
+        }
+
+        setTimeout(()=>{
+            location.href=url;
+        },450);
+
+    });
+
+});
+
+window.addEventListener("pageshow",()=>{
+
+    document.body.classList.remove("slide-left");
+    document.body.classList.remove("slide-right");
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>黑芳 | CHARACTER</title>
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="character5.css">
+<link rel="stylesheet" href="menu.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<a href="character.html" class="back-top">
+← CHARACTER
+</a>
+
+<div class="container">
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-image">
+
+<img
+src="images/feifan_color.png"
+class="color-bg"
+alt="">
+
+<img
+src="images/feifan_full_front.png"
+class="full-image"
+alt="黑芳">
+
+<img
+src="images/feifan_full_back.png"
+class="hero-back"
+alt="背面">
+
+</div>
+
+<div class="hero-text">
+
+<div class="name-box">
+
+    <span class="ruby-name">　 ヘイファン</span>
+
+    <h1>黑芳</h1>
+
+</div>
+
+<div class="hero-sub">
+
+<h2>HEIFAN</h2>
+
+<span class="cv">
+<span>CV.</span> ???
+</span>
+
+</div>
+
+<div class="line"></div>
+
+<p class="catch">
+
+「──信用に足る人間かは、<br>
+　　　俺が決める。口出しは不要だ」
+
+</p>
+
+<!-- サンプルボイス -->
+
+<div class="voice-mini">
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROFILE -->
+
+<section class="profile-area">
+
+<div class="profile">
+
+<h2>PROFILE</h2>
+
+<table>
+
+<tr>
+<th>年齢</th>
+<td>18歳</td>
+</tr>
+
+<tr>
+<th>誕生日</th>
+<td>9月28日</td>
+</tr>
+
+<tr>
+<th>立場</th>
+<td>九天党の警察</td>
+</tr>
+
+<tr>
+<th>身長</th>
+<td>179cm</td>
+</tr>
+
+<tr>
+<th>出身</th>
+<td>横浜中華街</td>
+</tr>
+
+<tr>
+<th>趣味・特技</th>
+<td>空手</td>
+</tr>
+
+<tr>
+<th>家族構成</th>
+<td>母</td>
+</tr>
+
+<tr>
+
+<th>イメージカラー</th>
+
+<td>
+
+<span class="color-chip"></span>
+
+黒鳶（くろとび）
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="back-image">
+
+<img
+src="images/feifan_sd.png"
+class="sd-mini"
+alt="SD">
+
+</div>
+
+</section>
+
+<!-- キャラクター説明 -->
+
+<section class="description">
+
+<p>
+
+横浜中華街の治安を維持する組織
+「九天党」
+に所属しており、<br>
+拳銃の所持が認められている。
+
+<br><br>
+
+狐炎をなるべく人目に触れない場所で保護しており、
+心配が絶えない。
+
+<br><br>
+
+狐炎に変若水を飲ませた者の血を引いていることを知り、<br>
+不老不死にしてしまったことへの責任をなんとなく感じている。
+
+<br><br>
+
+こう見えて純日本人である。
+
+</p>
+
+<div class="quote">
+
+────「ここは俺が引き受ける。」<br>
+　　　　　　　真っすぐな想いは、揺るがない。
+
+</div>
+
+<div class="character-nav">
+
+    <a href="character.html" class="nav-back">
+        ← CHARACTER一覧へ戻る
+    </a>
+
+    <a href="character6.html" class="nav-next">
+        ヴァル・ディラン →
+    </a>
+
+</div>
+
+</div>
+
+<div id="menu-container"></div>
+
+<script src="menu-loader.js"></script>
+<script>
+
+document.querySelectorAll(".character-nav a").forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const url=this.href;
+
+        if(this.classList.contains("nav-next")){
+            document.body.classList.add("slide-left");
+        }else{
+            document.body.classList.add("slide-right");
+        }
+
+        setTimeout(()=>{
+            location.href=url;
+        },450);
+
+    });
+
+});
+
+window.addEventListener("pageshow",()=>{
+
+    document.body.classList.remove("slide-left");
+    document.body.classList.remove("slide-right");
+
+});
+
+</script>
+
+</body>
+</html>

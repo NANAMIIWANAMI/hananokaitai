@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>篠原 旭 | CHARACTER</title>
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="character2.css">
+<link rel="stylesheet" href="menu.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<a href="character.html" class="back-top">
+← CHARACTER
+</a>
+
+<div class="container">
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-image">
+
+    <img src="images/asahi_color.png"
+    class="color-bg"
+    alt="">
+
+    <img src="images/asahi_full_front.png"
+    class="full-image"
+    alt="篠原旭">
+
+    <img src="images/asahi_full_back.png"
+    class="hero-back"
+    alt="背面">
+
+</div>
+
+<div class="hero-text">
+
+<div class="name-box">
+
+<span class="ruby-name">　し　の　は　ら　　あ　さ　ひ</span>
+
+<h1>篠原 旭</h1>
+
+</div>
+
+<div class="hero-sub">
+
+<h2>ASAHI SHINOHARA</h2>
+
+<span class="cv">
+<span>CV.</span> 水奈瀬リト
+</span>
+
+</div>
+
+<div class="line"></div>
+
+<p class="catch">
+
+「──ここはどこか寂しいけれど、<br>
+　　　夜は星がきれいで俺は好きだな」
+
+</p>
+
+<!-- サンプルボイス -->
+
+<div class="voice-mini">
+
+<button class="voice-btn" data-audio="sounds/asahi/voice01.wav">
+▶ Voice 01
+</button>
+
+<button class="voice-btn" data-audio="sounds/asahi/voice02.wav">
+▶ Voice 02
+</button>
+
+<button class="voice-btn" data-audio="sounds/asahi/voice03.wav">
+▶ Voice 03
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROFILE -->
+
+<section class="profile-area">
+
+<div class="profile">
+
+<h2>PROFILE</h2>
+
+<table>
+
+<tr>
+<th>年齢</th>
+<td>16歳</td>
+</tr>
+
+<tr>
+<th>誕生日</th>
+<td>2月6日</td>
+</tr>
+
+<tr>
+<th>職業</th>
+<td>高校2年生</td>
+</tr>
+
+<tr>
+<th>身長</th>
+<td>176cm</td>
+</tr>
+
+<tr>
+<th>出身</th>
+<td>東京都墨田区</td>
+</tr>
+
+<tr>
+<th>趣味・特技</th>
+<td>将棋</td>
+</tr>
+
+<tr>
+<th>家族構成</th>
+<td>父・母</td>
+</tr>
+
+<tr>
+
+<th>イメージカラー</th>
+
+<td>
+
+<span class="color-chip"></span>
+
+紺瑠璃（こんるり）
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="back-image">
+    
+
+<img
+src="images/asahi_sd.png"
+class="sd-mini"
+alt="SD">
+
+<div class="back-wrap">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- キャラクター説明 -->
+
+<section class="description">
+
+<p>
+
+とても穏やかな気質で優しい性格でどこか抜けているところがある。 
+
+<br><br>
+
+成績は並みで、秀でるものはとくに無いが<br>
+唯一、将棋だけは彼の右に 出るものはいない。
+
+<br><br>
+
+小学2年生の時に東京から横浜に転居してきた。
+
+<br><br>
+
+めぐみとは、小中高と学校が同じで、<br>
+小学校で3度同じクラスになった。<br>
+ その当時の名残で”めぐみちゃん”と呼ぶ。
+
+<br><br>
+
+めぐみとは小学校から高校まで同じ学校へ通い、<br>
+小学生の頃には三度同じクラスになった。
+
+<br><br>
+
+この年齢になっても名前で呼ぶことに<br>
+ためらいがないことは彼が天然な証である。
+
+<br><br>
+
+今年は5年ぶりに
+めぐみと同じクラスになった。
+
+</p>
+
+<div class="quote">
+
+────「めぐみちゃん、おはよう」<br>
+　　　その何気ない一言が、いつもの朝を運んでくる。
+
+</div>
+
+</section>
+
+<div class="character-nav">
+
+    <a href="character.html" class="nav-back">
+        ← CHARACTER一覧へ戻る
+    </a>
+
+    <a href="character3.html" class="nav-next">
+        江良 冬真 →
+    </a>
+
+</div>
+
+<div id="menu-container"></div>
+
+<script src="menu-loader.js"></script>
+<script>
+
+document.querySelectorAll(".character-nav a").forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const url=this.href;
+
+        if(this.classList.contains("nav-next")){
+            document.body.classList.add("slide-left");
+        }else{
+            document.body.classList.add("slide-right");
+        }
+
+        setTimeout(()=>{
+            location.href=url;
+        },450);
+
+    });
+
+});
+
+// サンプルボイス
+
+let currentVoice = null;
+let currentButton = null;
+
+
+document.querySelectorAll(".voice-btn").forEach(btn=>{
+
+
+    btn.addEventListener("click",()=>{
+
+
+        const src = btn.dataset.audio;
+
+
+        if(currentVoice){
+
+            currentVoice.pause();
+            currentVoice.currentTime = 0;
+
+            if(currentButton){
+
+                currentButton.textContent =
+                currentButton.dataset.label;
+
+            }
+
+        }
+
+
+        if(currentButton === btn){
+
+            currentVoice = null;
+            currentButton = null;
+
+            return;
+
+        }
+
+
+        btn.dataset.label = btn.textContent;
+
+
+        btn.textContent =
+        btn.textContent.replace("▶","■");
+
+
+        currentVoice = new Audio(src);
+
+        currentButton = btn;
+
+
+        currentVoice.play();
+
+
+        currentVoice.addEventListener("ended",()=>{
+
+            btn.textContent =
+            btn.dataset.label;
+
+            currentVoice = null;
+            currentButton = null;
+
+        });
+
+
+    });
+
+
+});
+
+
+window.addEventListener("pageshow",()=>{
+
+    document.body.classList.remove("slide-left");
+    document.body.classList.remove("slide-right");
+
+});
+
+</script>
+
+</body>
+
+</html>

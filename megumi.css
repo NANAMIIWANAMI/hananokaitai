@@ -1,0 +1,575 @@
+body{
+
+    margin:0;
+    background:#000;
+    color:white;
+    font-family:"Yu Mincho",serif;
+
+}
+
+.background{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100svh;
+
+    background:url("images/background.jpg") center center / cover no-repeat;
+
+    filter:brightness(.33);
+
+    z-index:-1;
+
+}
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:60px 0 90px;
+
+}
+
+/*==========================
+  CHARACTERへ戻る
+==========================*/
+
+.back-top{
+
+    position:fixed;
+
+    top:35px;
+    left:45px;
+
+    color:white;
+
+    text-decoration:none;
+
+    opacity:.7;
+
+    letter-spacing:.12em;
+
+    transition:.3s;
+
+}
+
+.back-top:hover{
+
+    color:#f5b1aa;
+
+}
+
+/*==========================
+  HERO
+==========================*/
+
+.hero{
+
+    display:grid;
+
+    grid-template-columns:330px 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+    margin-bottom:65px;
+
+}
+
+.hero-image{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.color-bg{
+
+    position:absolute;
+
+    width:250px;
+
+    opacity:.22;
+
+    border-radius:50%;
+
+    filter:blur(.3px);
+
+}
+
+.full-image{
+
+    position:relative;
+
+    width:240px;
+
+    z-index:2;
+
+}
+
+.hero-text h1{
+
+    margin:0;
+
+    font-size:54px;
+
+    font-weight:normal;
+
+    letter-spacing:.18em;
+
+}
+
+.hero-text h2{
+
+    margin:8px 0;
+
+    font-size:18px;
+
+    font-weight:300;
+
+    color:rgba(255,255,255,.55);
+
+    letter-spacing:.45em;
+
+}
+
+.line{
+
+    width:110px;
+
+    height:1px;
+
+    background:#f5b1aa;
+
+    margin:24px 0;
+
+}
+
+.catch{
+
+    font-size:24px;
+
+    line-height:2;
+
+    margin-bottom:22px;
+
+}
+
+/*==========================
+  サンプルボイス
+==========================*/
+
+.voice-mini{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.voice-btn{
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    background:rgba(255,255,255,.05);
+
+    color:white;
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.voice-btn:hover{
+
+    background:#f5b1aa;
+
+    color:#111;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 0 18px rgba(245,177,170,.4);
+
+}
+
+/*==========================
+  PROFILE
+==========================*/
+
+.profile-area{
+
+    display:grid;
+
+    grid-template-columns:1fr 180px;
+
+    gap:40px;
+
+    align-items:center;
+
+    margin-bottom:70px;
+
+}
+
+.profile h2{
+
+    color:#f5b1aa;
+
+    font-weight:normal;
+
+    letter-spacing:.15em;
+
+    margin-bottom:18px;
+
+}
+
+.profile table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.profile th{
+
+    width:150px;
+
+    text-align:left;
+
+    padding:12px;
+
+    color:#f5b1aa;
+
+    border-bottom:1px solid rgba(255,255,255,.12);
+
+    font-weight:normal;
+
+}
+
+.profile td{
+
+    padding:12px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.color-chip{
+
+    display:inline-block;
+
+    width:16px;
+
+    height:16px;
+
+    border-radius:50%;
+
+    background:#f5b1aa;
+
+    margin-right:10px;
+
+    vertical-align:middle;
+
+}
+
+/*==========================
+  背面
+==========================*/
+
+.back-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.back-image img{
+
+    width:130px;
+
+    opacity:.95;
+
+}
+
+/*==========================
+  区切り線
+==========================*/
+
+.section-divider{
+
+    width:80%;
+
+    height:1px;
+
+    margin:55px auto;
+
+    background:rgba(255,255,255,.12);
+
+}
+
+/*==========================
+  キャラクター説明
+==========================*/
+
+.description p{
+
+    background:rgba(255,255,255,.04);
+
+    border-left:3px solid #f5b1aa;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    line-height:2.3;
+
+    font-size:17px;
+
+}
+
+.quote{
+
+    margin-top:28px;
+
+    text-align:right;
+
+    color:#ffd9cf;
+
+    font-style:italic;
+
+    line-height:2;
+
+}
+/*==========================
+  表情差分
+==========================*/
+
+.expression{
+
+    margin:70px 0;
+
+}
+
+.expression-grid{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.expression-grid img{
+
+    width:200px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+    transition:.35s;
+
+}
+
+.expression-grid img:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 25px rgba(245,177,170,.35);
+
+}
+
+/*==========================
+  SDキャラ
+==========================*/
+
+.sd{
+
+    text-align:center;
+
+    margin:80px 0;
+
+}
+
+.sd img{
+
+    width:180px;
+
+    transition:.35s;
+
+}
+
+.sd img:hover{
+
+    transform:scale(1.06);
+
+}
+
+/*==========================
+  TOPへ戻る
+==========================*/
+
+.back{
+
+    display:inline-block;
+
+    margin:40px auto 0;
+
+    padding:14px 42px;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:40px;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.back:hover{
+
+    color:#f5b1aa;
+
+    border-color:#f5b1aa;
+
+    box-shadow:0 0 18px rgba(245,177,170,.35);
+
+}
+
+/*==========================
+  レスポンシブ
+==========================*/
+
+@media(max-width:900px){
+
+.container{
+
+    width:94%;
+
+}
+
+.hero{
+
+    grid-template-columns:1fr;
+
+    gap:35px;
+
+    text-align:center;
+
+}
+
+.hero-image{
+
+    order:-1;
+
+}
+
+.full-image{
+
+    width:210px;
+
+}
+
+.color-bg{
+
+    width:220px;
+
+}
+
+.hero-text h1{
+
+    font-size:42px;
+
+}
+
+.line{
+
+    margin:22px auto;
+
+}
+
+.voice-mini{
+
+    justify-content:center;
+
+}
+
+.profile-area{
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+
+}
+
+.back-image{
+
+    order:-1;
+
+}
+
+.expression-grid{
+
+    gap:20px;
+
+}
+
+.expression-grid img{
+
+    width:150px;
+
+}
+
+.sd img{
+
+    width:150px;
+
+}
+
+}
+
+/*==========================
+  画像共通
+==========================*/
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+::selection{
+
+    background:rgba(245,177,170,.25);
+
+}

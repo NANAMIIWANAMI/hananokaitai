@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CHARACTER | 花ノ芥蔕</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="stylesheet" href="character.css">
+    <link rel="stylesheet" href="menu.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <!-- ABOUTページと共通 -->
+    <a href="index.html" class="top-button">← TOP</a>
+
+    <h1>CHARACTER</h1>
+
+    <p class="subtitle">＜キャラクター＞</p>
+
+    <div class="title-decoration">
+        <span>❁</span>
+    </div>
+
+    <!-- メインキャラクター -->
+
+    <section>
+
+        <div class="character-grid">
+
+            <a href="character1.html" class="card megumi">
+                <img src="images/icons/megumi1.png" alt="宮上 めぐみ">
+                <span class="name">宮上 めぐみ</span>
+            </a>
+
+            <a href="character2.html" class="card asahi">
+                <img src="images/icons/asahi1.png" alt="篠原 旭">
+                <span class="name">篠原 旭</span>
+            </a>
+
+            <a href="character3.html" class="card toma">
+                <img src="images/icons/toma1.png" alt="江良 冬真">
+                <span class="name">江良 冬真</span>
+            </a>
+
+            <a href="character4.html" class="card toshihiko">
+                <img src="images/icons/toshihiko1.png" alt="江良 俊彦">
+                <span class="name">江良 俊彦</span>
+            </a>
+
+            <a href="character5.html" class="card feifan">
+                <img src="images/icons/feifan1.png" alt="黑芳">
+                <span class="name">黑芳</span>
+            </a>
+
+            <a href="character6.html" class="card deirann">
+                <img src="images/icons/deirann1.png" alt="ヴァル・ディラン">
+                <span class="name">ヴァル・ディラン</span>
+            </a>
+
+        </div>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- サブキャラクター -->
+
+    <section>
+
+        <div class="character-grid sub">
+
+            <a href="character7.html" class="card niina">
+                <img src="images/icons/niina1.png" alt="関口 新菜">
+                <span class="name">関口 新菜</span>
+            </a>
+
+            <a href="character8.html" class="card huyen">
+                <img src="images/icons/huyen1.png" alt="狐炎">
+                <span class="name">狐炎</span>
+            </a>
+
+            <a href="character9.html" class="card sumire">
+                <img src="images/icons/sumire1.png" alt="三森 すみれ">
+                <span class="name">三森 すみれ</span>
+            </a>
+
+            <a href="character10.html" class="card rihonn">
+                <img src="images/icons/ri-honn1.png" alt="麗紅">
+                <span class="name">麗紅</span>
+            </a>
+
+        </div>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 相関図 -->
+
+    <section id="relationship">
+
+        <h2>登場人物・相関図</h2>
+
+        <p class="section-text">
+
+            登場人物同士の関係をまとめた相関図です。
+
+        </p>
+
+        <img
+            src="images/character_relationship.png"
+            alt="人物相関図"
+            class="relationship-image"
+            id="relationshipImage">
+
+        <p class="relationship-note">
+
+            ※クリックすると拡大表示できます。
+
+        </p>
+
+    </section>
+
+    <!-- モーダル -->
+
+    <div id="imageModal">
+
+        <span id="closeModal">&times;</span>
+
+        <img id="modalImage" alt="拡大画像">
+
+    </div>
+
+    <a href="index.html" class="back">
+
+        ← TOP
+
+    </a>
+
+</div>
+
+<div id="menu-container"></div>
+
+<script>
+
+const img = document.getElementById("relationshipImage");
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const close = document.getElementById("closeModal");
+
+img.addEventListener("click", () => {
+
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+    modalImg.alt = img.alt;
+
+});
+
+close.addEventListener("click", () => {
+
+    modal.style.display = "none";
+
+});
+
+modal.addEventListener("click", (e) => {
+
+    if (e.target === modal) {
+
+        modal.style.display = "none";
+
+    }
+
+});
+
+</script>
+
+<script src="menu-loader.js"></script>
+
+</body>
+
+</html>

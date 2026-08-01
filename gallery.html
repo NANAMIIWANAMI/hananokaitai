@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GALLERY | 花ノ芥蔕</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="menu.css">
+
+</head>
+
+
+<body>
+
+
+<div class="background"></div>
+
+
+<div class="container">
+
+    <a href="index.html" class="top-button">
+        ← TOP
+    </a>
+
+    <h1>GALLERY</h1>
+
+    <p class="subtitle">＜ギャラリー＞</p>
+
+    <div class="title-decoration">
+        <span>❁</span>
+    </div>
+
+
+    <div class="layout">
+
+
+        <!-- 左メニュー -->
+
+        <aside class="side-menu">
+
+
+            <a href="#event">
+                イベントCG
+            </a>
+
+
+            <a href="#background">
+                背景
+            </a>
+
+
+            <a href="#visual">
+                メインビジュアル
+            </a>
+
+        </aside>
+
+
+
+
+
+        <!-- メイン -->
+
+        <main class="content">
+
+
+
+            <!-- イベントCG -->
+
+
+
+<section id="event">
+
+    <h2>イベントCG</h2>
+
+    <div class="event-gallery">
+
+        <img
+            src="images/gallery_event_01.png"
+            alt="イベントCG01"
+            onclick="openImage(this.src)">
+
+        <img
+            src="images/gallery_event_02.png"
+            alt="イベントCG02"
+            onclick="openImage(this.src)">
+
+        <img
+            src="images/gallery_event_03.png"
+            alt="イベントCG03"
+            onclick="openImage(this.src)">
+
+        <div class="coming-card">
+            Coming Soon...
+        </div>
+
+        <div class="coming-card">
+            Coming Soon...
+        </div>
+
+        <div class="coming-card">
+            Coming Soon...
+        </div>
+
+    </div>
+
+</section>   
+
+<section id="background">
+
+    <h2>背景</h2>
+
+    <div class="event-gallery">
+
+        <img
+        src="images/gallery_background_01.png"
+        alt="背景01"
+        onclick="openImage(this.src)">
+
+        <div class="coming-card">
+            Coming Soon...
+        </div>
+
+        <div class="coming-card">
+            Coming Soon...
+        </div>
+
+    </div>
+
+</section>
+
+
+            <!-- メインビジュアル -->
+
+            <section id="visual">
+
+
+                <h2>メインビジュアル</h2>
+
+
+                <div class="gallery-card">
+
+
+                    <img
+                    src="images/gallery_mainvisual_01.png"
+                    alt="メインビジュアル"
+                    onclick="openImage(this.src)">
+
+
+                </div>
+
+
+            </section>
+
+
+
+
+
+
+            <a href="index.html" class="back">
+
+                ← TOP
+
+            </a>
+
+
+
+        </main>
+
+    </div> <!-- layout -->
+
+</div> <!-- container -->
+
+<!-- 拡大表示 -->
+<div id="image-viewer">
+
+    <span id="close-button" onclick="closeImage()">
+        ×
+    </span>
+
+    <img
+        id="viewer-image"
+        onclick="event.stopPropagation()">
+
+</div>
+
+<script>
+
+const viewer = document.getElementById("image-viewer");
+const image = document.getElementById("viewer-image");
+
+function openImage(src){
+
+    image.src = src;
+
+    viewer.style.display = "flex";
+
+    requestAnimationFrame(() => {
+
+        viewer.style.opacity = "1";
+        image.style.opacity = "1";
+        image.style.transform = "scale(1)";
+
+    });
+
+}
+
+function closeImage(){
+
+    viewer.style.opacity = "0";
+
+    image.style.opacity = "0";
+
+    image.style.transform = "scale(.95)";
+
+    setTimeout(() => {
+
+        viewer.style.display = "none";
+
+    }, 350);
+
+}
+
+viewer.onclick = closeImage;
+
+</script>
+
+<div id="menu-container"></div>
+
+<script src="menu-loader.js"></script>
+
+</body>
+
+</html>

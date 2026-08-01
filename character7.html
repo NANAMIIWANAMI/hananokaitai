@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>関口新菜 | CHARACTER</title>
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="character7.css">
+<link rel="stylesheet" href="menu.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<a href="character.html" class="back-top">
+← CHARACTER
+</a>
+
+<div class="container">
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-image">
+
+<img
+src="images/niina_color.png"
+class="color-bg"
+alt="">
+
+<img
+src="images/niina_full_front.png"
+class="full-image"
+alt="関口新菜">
+
+</div>
+
+<div class="hero-text">
+
+<div class="name-box">
+
+    <span class="ruby-name">　せ　き　ぐ　ち　　　　に　　い　　な</span>
+
+    <h1>関口 新菜</h1>
+
+</div>
+
+<div class="hero-sub">
+
+<h2>NIINA SEKIGUCHI</h2>
+
+<span class="cv">
+<span>CV.</span> ???
+</span>
+
+</div>
+
+<div class="line"></div>
+
+<p class="catch">
+
+「──また、一緒に行こうね……！<br>
+<span>　　　　　　甘味処！」</span>
+
+</p>
+
+<!-- サンプルボイス -->
+
+<div class="voice-mini">
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+<button class="voice-btn">
+Coming Soon
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROFILE -->
+
+<section class="profile-area">
+
+<div class="profile">
+
+<h2>PROFILE</h2>
+
+<table>
+
+<tr>
+<th>年齢</th>
+<td>16歳</td>
+</tr>
+
+<tr>
+<th>誕生日</th>
+<td>6月13日</td>
+</tr>
+
+<tr>
+<th>職業</th>
+<td>学生（高校2年生）</td>
+</tr>
+
+<tr>
+<th>身長</th>
+<td>156cm</td>
+</tr>
+
+<tr>
+<th>出身</th>
+<td>神奈川県横浜市</td>
+</tr>
+
+<tr>
+<th>趣味・特技</th>
+<td>読書・料理</td>
+</tr>
+
+<tr>
+<th>家族構成</th>
+<td>父・母・弟</td>
+</tr>
+
+<tr>
+
+<th>イメージカラー</th>
+
+<td>
+
+<span class="color-chip"></span>
+
+卵色（たまごいろ）
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="back-image">
+
+<img
+src="images/niina_sd.png"
+class="sd-mini"
+alt="SD">
+
+</div>
+
+</section>
+
+<!-- キャラクター説明 -->
+
+<section class="description">
+
+<p>
+
+めぐみ溺愛の親友。
+
+<br><br>
+
+純真で誰からも愛されるタイプだが、
+少し恥ずかしがり屋な一面もある。
+
+<br><br>
+
+読書が好きで、
+高校では図書委員に所属している。<br>
+料理全般も得意。
+
+<br><br>
+
+最近は、
+放課後にめぐみと和菓子屋に<br>
+甘味を食べに出かけることを楽しみにしている。
+
+</p>
+
+<div class="quote">
+    ────「めぐみちゃん、一緒に帰ろう？」<br>
+　　　　　　　その笑顔が、そっと心を包み込む。
+
+</div>
+
+<div class="character-nav">
+
+    <a href="character.html" class="nav-back">
+        ← CHARACTER一覧へ戻る
+    </a>
+
+    <a href="character8.html" class="nav-next">
+        狐炎 →
+    </a>
+
+</div>
+
+<div id="menu-container"></div>
+
+<script src="menu-loader.js"></script>
+<script>
+
+document.querySelectorAll(".character-nav a").forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const url=this.href;
+
+        if(this.classList.contains("nav-next")){
+            document.body.classList.add("slide-left");
+        }else{
+            document.body.classList.add("slide-right");
+        }
+
+        setTimeout(()=>{
+            location.href=url;
+        },450);
+
+    });
+
+});
+
+window.addEventListener("pageshow",()=>{
+
+    document.body.classList.remove("slide-left");
+    document.body.classList.remove("slide-right");
+
+});
+
+</script>
+
+</body>
+
+</html>

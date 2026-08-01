@@ -1,0 +1,1061 @@
+html,
+body{
+
+    overflow-x:hidden;
+
+}
+
+body{
+
+    margin:0;
+    background:#000;
+    color:white;
+    font-family:"Yu Mincho",serif;
+
+}
+
+.background{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100svh;
+
+    background:url("images/background.jpg") center center / cover no-repeat;
+
+    filter:brightness(.33);
+
+    z-index:-1;
+
+}
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:60px 0 90px;
+
+}
+
+/*==========================
+  CHARACTERへ戻る
+==========================*/
+
+.back-top{
+
+    position:fixed;
+
+    top:35px;
+    left:45px;
+
+    display:inline-block;
+
+    padding:12px 26px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(6px);
+
+    transition:.3s;
+
+    letter-spacing:.12em;
+
+    z-index:100;
+
+}
+
+.back-top:hover{
+
+    color:#f5b1aa;
+
+    border-color:#f5b1aa;
+
+    box-shadow:0 0 18px rgba(245,177,170,.35);
+
+}
+/*==========================
+  HERO
+==========================*/
+
+.hero{
+
+    display:grid;
+
+    grid-template-columns:330px 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+    margin-bottom:65px;
+
+}
+
+.hero-image{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.color-bg{
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    object-fit:cover;
+
+    opacity:.75;
+
+    border-radius:50%;
+
+    transform:translate(40px, 100px);
+
+}
+
+.full-image{
+
+    position:relative;
+
+    width:140px;
+
+    z-index:2;
+
+    transform:translate(30px,50px);
+
+    filter:
+        drop-shadow(0 10px 14px rgba(255,255,255,.22))
+        drop-shadow(0 25px 35px rgba(252,213,117,.30));
+
+}
+
+.hero-text h1{
+
+    margin:0;
+
+    font-size:54px;
+
+    font-weight:normal;
+
+    letter-spacing:.18em;
+
+}
+
+.hero-text h2{
+
+    margin:8px 0;
+
+    font-size:18px;
+
+    font-weight:300;
+
+    color:rgba(255,255,255,.55);
+
+    letter-spacing:.45em;
+
+}
+
+.hero-sub{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+.hero-sub h2{
+
+    margin:0;
+
+    font-size:18px;
+
+    font-weight:300;
+
+    letter-spacing:.25em;
+
+    color:rgba(255,255,255,.55);
+
+}
+
+.cv{
+
+    font-size:14px;
+
+    color:#fcd575;
+
+    letter-spacing:.08em;
+
+    white-space:nowrap;
+
+}
+
+.cv span{
+
+    opacity:.6;
+
+}
+
+.line{
+
+    width:380px;
+
+    height:1px;
+
+    background:#fcd575;
+
+    margin:24px 0;
+
+}
+
+.catch{
+
+    font-size:24px;
+
+    line-height:2;
+
+    margin-bottom:22px;
+
+}
+
+.catch span{
+
+    display:block;
+
+    transform:translateX(40px);
+
+}
+
+/*==========================
+  サンプルボイス
+==========================*/
+
+.voice-mini{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.voice-btn{
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    background:rgba(255,255,255,.05);
+
+    color:white;
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.voice-btn:hover{
+
+    background:#fcd575;
+
+    color:#222;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 0 18px rgba(252,213,117,.45);
+
+}
+
+/*==========================
+  PROFILE
+==========================*/
+
+.profile-area{
+
+    display:grid;
+
+    grid-template-columns:400px 220px;
+
+    justify-content:center;
+
+    gap:70px;
+
+    align-items:center;
+
+    margin-bottom:70px;
+
+}
+
+.profile h2{
+
+    color:#fcd575;
+
+    font-weight:normal;
+
+    letter-spacing:.15em;
+
+    margin-bottom:18px;
+
+}
+
+.profile table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.profile th{
+
+    width:150px;
+
+    text-align:left;
+
+    padding:12px;
+
+    color:#fcd575;
+
+    border-bottom:1px solid rgba(255,255,255,.12);
+
+    font-weight:normal;
+
+}
+
+.profile td{
+
+    padding:12px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.color-chip{
+
+    display:inline-block;
+
+    width:16px;
+
+    height:16px;
+
+    border-radius:50%;
+
+    background:#fcd575;
+
+    margin-right:10px;
+
+    vertical-align:middle;
+
+}
+/*==========================
+  SD
+==========================*/
+
+.back-image{
+
+    display:flex;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+    transform:translateX(-40px);
+
+}
+
+.sd-mini{
+
+    width:10px;
+
+    transition:.3s;
+
+}
+
+.sd-mini:hover{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================
+  区切り線
+==========================*/
+
+.section-divider{
+
+    width:80%;
+
+    height:1px;
+
+    margin:55px auto;
+
+    background:rgba(255,255,255,.12);
+
+}
+
+/*==========================
+  キャラクター説明
+==========================*/
+
+.description p{
+
+    background:rgba(255,255,255,.04);
+
+    border-left:3px solid #fcd575;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    line-height:2.3;
+
+    font-size:17px;
+
+}
+
+.quote{
+
+    width:75%;
+
+    margin:30px auto 0;
+
+    color:#fff2be;
+
+    font-style:italic;
+
+    line-height:2;
+
+    text-align:left;
+
+}
+
+/*==========================
+  TOPへ戻る
+==========================*/
+
+.back{
+
+    display:inline-block;
+
+    margin:40px auto 0;
+
+    padding:14px 42px;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:40px;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.back:hover{
+
+    color:#fcd575;
+
+    border-color:#fcd575;
+
+    box-shadow:0 0 18px rgba(252,213,117,.35);
+
+}
+
+/*==========================
+  レスポンシブ
+==========================*/
+
+@media(max-width:900px){
+
+.container{
+
+    width:94%;
+
+}
+
+.hero{
+
+    grid-template-columns:1fr;
+
+    gap:35px;
+
+    text-align:center;
+
+}
+
+.hero-image{
+
+    order:-1;
+
+}
+
+.full-image{
+
+    width:240px;
+
+    filter:
+        drop-shadow(0 0 18px rgba(255,255,255,.18))
+        drop-shadow(0 0 40px rgba(252,213,117,.22));
+
+}
+
+.color-bg{
+
+    width:220px;
+
+}
+
+.hero-text h1{
+
+    font-size:42px;
+
+}
+
+.line{
+
+    margin:22px auto;
+
+}
+
+.voice-mini{
+
+    justify-content:center;
+
+}
+
+.profile-area{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.profile th{
+
+    width:140px;
+
+}
+
+.back-image{
+
+    justify-content:center;
+
+    transform:none;
+
+    margin-top:20px;
+
+}
+
+}
+
+/*==========================
+  画像共通
+==========================*/
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+::selection{
+
+    background:rgba(252,213,117,.25);
+
+}
+.name-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:0;
+
+    margin-bottom:2px;
+
+}
+
+.ruby-name{
+
+    font-size:12px;
+
+    color:#fcd575;
+
+    letter-spacing:.12em;
+
+    line-height:1;
+
+    margin-left:6px;
+
+    margin-bottom:-5px;
+
+    opacity:.95;
+
+}
+/*==================================
+    CHARACTER ページ送り
+==================================*/
+
+.character-nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:80px auto 40px;
+
+}
+
+.nav-back,
+.nav-next{
+
+    display:inline-block;
+
+    padding:12px 28px;
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(6px);
+
+    transition:.3s;
+
+    letter-spacing:.12em;
+
+}
+
+.nav-back:hover,
+.nav-next:hover{
+
+    color:#ffd7dd;
+
+    border-color:#ffd7dd;
+
+    box-shadow:0 0 18px rgba(255,215,221,.35);
+
+}
+/*==============================
+    次のキャラクター（狐炎）
+==============================*/
+
+.nav-next{
+
+    color:#e8eaa8;
+
+    border-color:#e8eaa8;
+
+}
+
+.nav-next:hover{
+
+    color:#F7F8CC;
+
+    border-color:#F7F8CC;
+
+    box-shadow:0 0 18px rgba(232,234,168,.35);
+
+}
+/*==================================
+ スマホ版（700px以下）
+==================================*/
+
+@media(max-width:900px){
+
+/* 戻るボタン */
+
+.back-top{
+
+    position:static;
+
+    display:inline-block;
+
+    margin:18px auto 28px;
+
+    padding:10px 20px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.04);
+
+    text-decoration:none;
+
+}
+
+/* 全体 */
+
+.container{
+
+    width:92%;
+
+    padding:0px 0 60px;
+
+}
+
+/* HERO */
+
+.hero{
+
+    display:block;
+
+    text-align:center;
+
+    margin-top:-20px;
+    margin-bottom:45px;
+
+}
+
+/* キャラ画像 */
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    margin-bottom:20px;
+
+}
+
+.full-image{
+
+    width:130px;
+
+    transform:translate(20px,0px);
+
+}
+
+.color-bg{
+
+    width:220px;
+    height:220px;
+
+    transform:translate(20px,-50px);
+
+}
+
+/* 名前 */
+
+.hero-text h1{
+
+    font-size:34px;
+
+    letter-spacing:.12em;
+
+}
+
+.ruby-name{
+
+    margin:0;
+
+    font-size:11px;
+
+}
+
+.hero-sub{
+
+    display:block;
+
+}
+
+.hero-sub h2{
+
+    font-size:15px;
+
+    letter-spacing:.15em;
+
+    margin-bottom:8px;
+
+}
+
+.cv{
+
+    display:block;
+
+    font-size:13px;
+
+}
+
+/* 線 */
+
+.line{
+
+    width:180px;
+
+    margin:18px auto;
+
+}
+
+/* キャッチ */
+
+.catch{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/* ボイス */
+
+.voice-mini{
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+.voice-btn{
+
+    font-size:12px;
+
+    padding:8px 10px;
+
+    white-space:nowrap;
+
+}
+
+/* PROFILE */
+
+.profile-area{
+
+    display:block;
+
+    transform:none;
+
+    margin-bottom:45px;
+
+}
+
+.profile table{
+
+    transform:none;
+
+    font-size:14px;
+
+}
+
+.profile th{
+
+    width:105px;
+
+}
+
+.profile h2{
+
+    text-align:center;
+
+}
+
+/* SD */
+
+.back-image{
+
+    margin-top:25px;
+
+    justify-content:center;
+
+}
+
+.back-full{
+
+    width:80px;
+
+}
+
+.sd-mini{
+
+    width:120px;
+
+}
+
+/* キャラ説明 */
+
+.description p{
+
+    padding:22px;
+
+    font-size:14px;
+
+    line-height:2;
+
+}
+
+.quote{
+
+    width:100%;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    margin-top:20px;
+
+}
+
+/* ページ送り */
+
+.character-nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-top:45px;
+
+}
+
+.nav-back,
+.nav-next{
+
+    display:inline-block;
+
+}
+
+}
+/*==============================
+  ページ遷移
+==============================*/
+
+.container{
+
+    transition:
+        transform .45s ease,
+        opacity .45s ease;
+
+}
+
+body.slide-left .container{
+
+    transform:translateX(-120px);
+    opacity:0;
+
+}
+
+body.slide-right .container{
+
+    transform:translateX(120px);
+    opacity:0;
+
+}
+/*==============================
+ iPad mini PROFILE 完全中央化
+==============================*/
+
+@media (min-width:700px) and (max-width:900px){
+
+.profile-area{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    width:100%;
+
+    margin:0 auto 45px;
+
+}
+
+
+.profile{
+
+    width:auto;
+
+}
+
+
+.profile h2{
+
+    text-align:center;
+
+}
+
+
+.profile table{
+
+    width:420px;
+
+    margin:0 auto;
+
+}
+
+
+.profile th{
+
+    width:140px;
+
+    text-align:left;
+
+}
+
+
+.profile td{
+
+    text-align:left;
+
+}
+
+
+.back-image{
+
+    width:100%;
+
+    justify-content:center;
+
+    transform:none;
+
+}
+
+}
