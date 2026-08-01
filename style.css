@@ -292,25 +292,21 @@ body{
 ==============================*/
 
 .copyright{
-
     position: fixed;
 
     left: 0;
     right: 0;
-    bottom: 18px;
+
+    bottom: calc(5px + env(safe-area-inset-bottom));
 
     text-align: center;
 
     color: rgba(255,255,255,.45);
-
     font-size: 12px;
-
     letter-spacing: .12em;
 
     z-index: 1000;
-
     pointer-events: none;
-
 }
 
 /*==================================
